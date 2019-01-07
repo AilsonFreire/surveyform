@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One|Lobster" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="./script.js"></script>
+</head>
+
+<body>
+    <div class="card-error">
+        <span id="message"></span>
+    </div>
+    <header class="center align-vertical">
+        <h2 class="title-one">Please take a time and answer</h2>
+        <h1 id="title">MY SURVEY</h1>
+    </header>
+
+    <main class="center padding-top-50">
+
+        <form id="survey-form" action="/">
+            <div class="card align-vertical">
+                <h2 id="description" class="center">Fake form to training front-end developer skills</h2>
+                <div class="center">
+                    <label id="name-label">Name:</label>
+                    <div>
+                        <input type="text" id="name" required onchange=handleName(this.value)>
+                        <div class="bar"></div>
+                    </div>
+                </div>
+
+                <div class="center">
+                    <label id="email-label">Email:</label>
+                    <div>
+                        <input type="text" id="email" required onchange=handleEmail(this.value)>
+                        <div class="bar"></div>
+                    </div>
+                </div>
+
+                <div class="center">
+                    <label id="phone-lable">Phone:</label>
+                    <div>
+                        <input type="text" id="number" min="18" max="18" required onchange=handlePhone(this.value)>
+                        <div class="bar"></div>
+                    </div>
+                </div>
+
+                <div class="center padding-top-20">
+                    <div class="align-horizontal padding-right-30">
+                        <label id="sex-label">Sex:</label>
+                        <select id="dropdown">
+                            <option value="male">Male</option>
+                            <option value="famale">Famale</option>
+                        </select>
+                    </div>
+
+                    <label id="marital-status">Marital status:</label>
+                    <div class="align-vertical">
+                        <input type="radio" name="marital-status" value="male"> Single<br>
+                        <input type="radio" name="marital-status" value="female">Married<br>
+                        <input type="radio" name="marital-status" value="other">Divorced<br>
+                        <input type="radio" name="marital-status" value="other">Widow(er)
+                    </div>
+                </div>
+
+                <div class="center padding-top-20 align-vertical">
+                    <label id="number-pets">Do you have pet(s)?:</label>
+                    <div class="center align-horizontal padding-top-20">
+                        <input type="checkbox" name="cat" value="cat"> I have a cat<br>
+                        <input type="checkbox" name="dog" value="dog"> I have a dog<br>
+                        <input type="checkbox" name="both" value="bird"> I have bird<br>
+                        <input type="checkbox" name="neither" value="neither" checked> I don´t have any <br>
+                    </div>
+                </div>
+
+                <div class="center align-vertical padding-top-20">
+                    <label id="self-describe">Describe yourself shortly:</label>
+                    <div class="padding-top-20">
+                        <textarea maxlength="250" cols="50" rows="5" autofocus>
+
+                            </textarea>
+                    </div>
+                </div>
+
+                <div class="center padding-top-20">
+                    <button type="submit" value="Submit" required>Submit</button>
+                </div>
+
+            </div>
+
+        </form>
+
+    </main>
+
+</body>
+
+</html>

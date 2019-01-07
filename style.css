@@ -1,0 +1,169 @@
+body {
+    background: #89E8D5;
+    --display-flex: flex;
+    --justify-content: center;
+    --align-items: center;
+    --flex-start: flex-start;
+    --flex-end: flex-end;
+    --direction-horizontal: row;
+    --direction-vertical: column;
+    --font-lobster: 'Lobster';
+    --font-alfa: 'Alfa Slab One';
+  }
+  
+  .teste {
+    background: red
+  }
+  
+  .center {
+    display: var(--display-flex, flex);
+    justify-content: var(--justify-content, center);
+    align-items: var(--align-items, center);
+  }
+  
+  .align-vertical {
+      flex-direction: var(--direction-vertical, column);
+  }
+  
+  .align-horizontal {
+    flex-direction: var(--direction-horizontal, row);
+  }
+
+  .center-horizontal {
+    display: var(--display-flex, center);
+    justify-content: var(--justify-content, center);
+    align-items: flex-start
+  }
+
+  .padding-top-50 {
+    padding-top: 50px;
+  }
+  
+  .padding-top-20 {
+    padding-top: 20px;
+  }
+  
+  .title-one {
+    font-family: var(--font-lobster);
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px   white;
+    margin-top: 30px;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+  }
+  
+  #title {
+    font-family: var(--font-alfa);
+    color: #FFF;
+    text-shadow: -3px 0 red, 0 3px red, 1px 0 red, 0 -1px red;
+    font-size: 45px;
+    transform: rotate(-3deg);
+    margin: 0;
+  }
+  
+  .card {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 100px;
+    padding-left: 100px;
+    width: auto;
+    height: auto;
+    background: #FFFF;
+    border-radius: 20px;
+    box-shadow: 0px 3px 2px 3px #BFBFBF;
+   
+  }
+  
+  input[type=text] {
+    font-size:18px;
+    padding:10px 10px 10px 5px;
+    width:300px;
+    border:none;
+    border-bottom:2px solid blue;
+  }
+  
+  input[type=text]:focus {
+    outline: none;
+    border-bottom: none;
+  }
+  
+  .bar {
+    border-bottom:3px solid red;
+    width: 0px;
+  }
+  
+  input:focus ~ .bar {
+    animation-name: border-bottom;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    width: 100%
+  }
+  
+  .flex-1 {
+  flex: 1;
+  }
+  
+  @keyframes border-bottom {
+     0% {
+      width: 0px;
+      margin-left: 50%;
+      margin-right: 50%;
+    }
+    /* You could think of as "step 2" */
+    100% {
+      width: 100%;
+    }
+  }
+  
+  label {
+    font-family: var(--font-lobster);
+    font-size: 20px
+  }
+  
+  div h2 {
+     font-family: var(--font-alfa);
+  /*    text-shadow: -3px 0 black, 0 3px black, 1px 0 black, 0 -1px black; */
+     transform: rotate(-0.5deg);
+  }
+  
+  .card-error {
+    opacity: 0;
+    margin-right: 20px;
+    min-width: 20%;
+    height: auto;
+    padding: 20px;
+    box-shadow: 0px 3px 2px 3px #BFBFBF;
+    background: #FFF;
+    border-radius: 10px;
+    right: 0;
+    z-index: 20;
+    position: fixed;
+    top: 150px
+  }
+  
+  #message {
+    font-size: 20px;
+    font-family: var(--font-lobster);
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px   white;
+    margin-top: 30px;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+  }
+.padding-right-30 {
+    padding-right: 30px
+}
+
+button {
+  background: blue;
+  border-radius: 5px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-family: var(--font-lobster);
+  color: #FFF;
+  font-size: 20px;
+  box-shadow: 3px 5px red;
+  border: none
+}
